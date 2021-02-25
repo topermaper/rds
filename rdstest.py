@@ -39,10 +39,11 @@ class RdsTest(object):
                     s = ser.write("{}{}{}".format(command,LF,CR).encode('ascii'))
                     r = ser.read(100) # read up to one hundred bytes
 
-                    print(r.decode("ascii"))
+                    print(r)
 
 
 if __name__ == "__main__":
     rdstest = RdsTest()
 
     rdstest.send_commands(sys.argv[1:])
+    
